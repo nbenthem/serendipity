@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const content = document.getElementById("content");
   const navItems = document.querySelectorAll(".nav-item");
 
-  const res = await fetch("data.json");
+  const res = await fetch("data/data.json");
   const data = await res.json();
 
   const sections = {
