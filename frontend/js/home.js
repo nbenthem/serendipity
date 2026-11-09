@@ -12,7 +12,7 @@
     const heroBg = data.heroBg || 'assets/hero.png';
     return `
       <section>
-        <!-- Hero with background asset (replace assets/hero-bg.jpg if you add a new file) -->
+        <!-- Hero background uses the local assets/hero.png image by default. -->
         <div class="hero" style="margin-bottom:1rem; border-radius:8px; overflow:hidden;">
           <div style="background-image:url('${heroBg}'); background-size:cover; background-position:center; padding:2.4rem 2rem; display:flex; align-items:center; justify-content:center; position:relative;">
             <div style="backdrop-filter:blur(2px); background:rgba(255,255,255,0.6); border-radius:12px; padding:1.2rem 1.4rem; max-width:1100px; width:100%; display:flex; gap:1.25rem; align-items:center; justify-content:space-between;">

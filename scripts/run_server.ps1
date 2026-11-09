@@ -1,12 +1,12 @@
 # Script PowerShell para lanzar servidor local en puerto 8000
-# Úsalo así: PowerShell -ExecutionPolicy Bypass -File run_server.ps1
+# Úsalo desde la raíz del proyecto: PowerShell -ExecutionPolicy Bypass -File scripts/run_server.ps1
 
 $port = 8000
-$currentDir = Split-Path -Parent $MyInvocation.MyCommand.Path
+$projectRoot = Join-Path (Split-Path -Parent $PSScriptRoot) "frontend"
 
 Write-Host "Iniciando servidor HTTP en puerto $port..."
 Write-Host "Abre en tu navegador: http://localhost:$port"
 Write-Host "Presiona Ctrl+C para detener el servidor."
 
-Set-Location $currentDir
+Set-Location $projectRoot
 python -m http.server $port --bind localhost
